@@ -31,7 +31,7 @@ package ['php7.0-fpm'] do
   action :install
 end
 
-package ['php-imagick', 'php-curl', 'php-gd', 'php-mcrypt', 'php-xml', 'php-mbstring', 'php-soap', 'php-mysql', 'php-pear'] do
+package ['php-imagick', 'php-curl', 'php-gd', 'php-mcrypt', 'php-xml', 'php-mbstring', 'php-soap', 'php-mysql', 'php-pear', 'php-xdebug'] do
     action :install
 end
 
@@ -44,7 +44,7 @@ template '/etc/php/7.0/cli/php.ini' do
 end
 
 
-package ['ntp', 'htop', 'vim', 'wget', 'mutt', 'npm', 'zip'] do
+package ['ntp', 'htop', 'vim', 'wget', 'mutt', 'npm', 'git', 'zip', 'net-tools'] do
     action :install
 end
 
