@@ -12,6 +12,8 @@ On your local machine try:
 ```
 > docker run -v [local_dir_path]:/app -p 8080:80 -d majdarbash/nginx
 
+> docker run -it majdarbash/nginx /bin/bash
+
 > docker pull majdarbash/nginx
 
 > docker build -t majdarbash/nginx .
