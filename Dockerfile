@@ -17,4 +17,4 @@ ADD ./cookbooks /var/chef/cookbooks
 RUN cd / && /opt/chef/embedded/bin/berks vendor /var/chef/cookbooks
 RUN chef-solo -c /var/chef/solo.rb -j /var/chef/solo.json
 
-CMD service php7.0-fpm start && nginx -g "daemon off;"
+CMD service php7.2-fpm start && nginx -g "daemon off;"
