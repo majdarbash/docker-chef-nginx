@@ -65,7 +65,12 @@ package ['redis-server'] do
     action :install
 end
 
-template '/etc/nginx/conf.d/default' do
+
+template '/etc/nginx/nginx.conf' do
+  source 'nginx.conf'
+end
+
+template '/etc/nginx/conf.d/default.conf' do
   source 'default.conf'
 end
 
