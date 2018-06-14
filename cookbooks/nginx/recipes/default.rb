@@ -14,6 +14,17 @@
     end
 end
 
+
+apt_repository 'nginx' do
+  uri        'http://nginx.org/packages/ubuntu/'
+  components ['nginx']
+end
+
+
+apt_repository 'php-fpm' do
+  uri        'ppa:ondrej/php'
+end
+
 bash 'apt-update' do
     code <<-EOH
         apt update
@@ -27,7 +38,7 @@ package ['nginx'] do
   action :install
 end
 
-package ['php7.0-fpm'] do
+package ['php7.1-fpm'] do
   action :install
 end
 
